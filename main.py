@@ -33,7 +33,7 @@ LINK_CHANNEL_PROOF = "https://t.me/InocseneZeroTuto"
 
 DEMO_CHANNEL = "@InocseneZeroTuto"
 
-# Mets ici le numéro de la vidéo de démo du panel dans ton canal (ex: 8) si tu en as une
+# Mets ici le numéro de la vidéo de démo du panel dans ton canal dès qu'elle sera prête
 PANEL_DEMO_ID = None
 
 WELCOME_FILES = [
@@ -509,7 +509,7 @@ def on_click(call):
         code = data.split("_", 1)[1]
         if code in PRODUCTS:
             p = PRODUCTS[code]
-            clear_temp = clear_demo(chat)
+            clear_demo(chat)
             ticket = TICKET_TEMPLATE.format(
                 order=make_order_number(call.from_user.id),
                 name=get_name(call.from_user),
@@ -534,4 +534,3 @@ if __name__ == "__main__":
     t.start()
     print("Bot is starting...")
     bot.infinity_polling(skip_pending=True)
-    
