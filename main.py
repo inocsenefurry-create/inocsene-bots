@@ -32,6 +32,8 @@ LINK_KEY_DAYOU = "https://t.me/InocseneZeroTuto/5"
 LINK_CHANNEL_PROOF = "https://t.me/InocseneZeroTuto"
 
 DEMO_CHANNEL = "@InocseneZeroTuto"
+
+# Mets ici le numéro de la vidéo de démo du panel dans ton canal (ex: 8) si tu en as une
 PANEL_DEMO_ID = None
 
 WELCOME_FILES = [
@@ -87,8 +89,8 @@ PRODUCTS = {
     },
 }
 
-# ───────────── PANEL PREMIUM ─────────────
-PANEL_TITLE = "INNOCENT ZERO : PREMIUM PANEL"
+# ───────────── PANEL PREMIUM INOCSENE ZERO ─────────────
+PANEL_TITLE = "INOCSENE ZERO : PREMIUM PANEL VIP"
 
 PANEL_PLANS = {
     "p12":  {"label": "12 Days",              "label_fr": "12 jours",           "price": 1450},
@@ -148,34 +150,34 @@ def build_offer(p):
         f"<blockquote>{feats}</blockquote>\n\n"
         f"{LINE}\n"
         f"💰 <b>Prix :</b> {price_text(p)}\n"
-        "💳 <b>Paiement :</b> Natcash\n"
+        "💳 <b>Paiement :</b> Natcash / MonCash / Meru\n"
         f"{LINE}\n\n"
         "🛒 <i>Appuie sur « Continuer l'achat » pour commander.</i>"
     )
 
 def build_panel_catalog():
     prices = "\n".join(
-        f"🔹 <b>{pl['price']:,} HTG</b> ({pl['label']}) ✅" for pl in PANEL_PLANS.values()
+        f"🔹 <b>{pl['price']:,} HTG</b> ({pl['label_fr']}) ✅" for pl in PANEL_PLANS.values()
     )
     return (
         f"<b>👑 {PANEL_TITLE} 👑</b>\n"
         f"{LINE}\n\n"
-        "<blockquote>🟢 <b>Aimbot Vip</b>\n"
-        "🟢 <b>Aimsilent</b>\n"
+        "<blockquote>🟢 <b>Aimbot Vip Pro</b>\n"
+        "🟢 <b>Aimsilent Haute Précision</b>\n"
         "🟢 <b>Snipers Aimlock</b>\n"
-        "🟢 <b>Speed Run</b>\n"
-        "🟢 <b>Esp Player Location</b></blockquote>\n\n"
-        "🛡️ <b>MAIN ID SAFE</b> ✅\n"
-        "📱 <b>ALL ANDROID MOBILE WORK</b>\n"
-        "⚙️ <b>HIDE / STREAMER MODE</b>\n\n"
+        "🟢 <b>Speed Run &amp; Teleport</b>\n"
+        "🟢 <b>Esp Player Location &amp; Box</b></blockquote>\n\n"
+        "🛡️ <b>MAIN ID SAFE &amp; SECURE</b> ✅\n"
+        "📱 <b>COMPATIBLE TOUS ANDROID</b>\n"
+        "⚙️ <b>HIDE / STREAMER MODE INTÉGRÉ</b>\n\n"
         f"{LINE}\n"
-        "⚡ <b>TARIFS OFFICIELS :</b>\n\n"
+        "⚡ <b>TARIFS OFFICIELS DU PANEL :</b>\n\n"
         f"<blockquote>{prices}</blockquote>\n\n"
         f"{LINE}\n"
-        f"🟢 <b>BUY PANEL</b> ➡️ <b>{ADMIN_USERNAME}</b> 🔴\n"
-        f"🟢 <b>BUY PANEL</b> ➡️ <b>WhatsApp {ADMIN_TEL}</b> 🔴\n"
-        f"👉 <b>CHECK PROOFS</b> ➡️ <a href=\"{LINK_CHANNEL_PROOF}\">Canal Tutos &amp; Proofs</a> 🔴\n\n"
-        "🛒 <i>Choisis ta durée ci-dessous pour commander.</i>"
+        f"🟢 <b>ACHAT DIRECT</b> ➡️ <b>{ADMIN_USERNAME}</b> 🔴\n"
+        f"🟢 <b>WHATSAPP</b> ➡️ <b>{ADMIN_TEL}</b> 🔴\n"
+        f"👉 <b>PREUVES &amp; TUTO</b> ➡️ <a href=\"{LINK_CHANNEL_PROOF}\">Canal Officiel</a> 🔴\n\n"
+        "🛒 <i>Sélectionne ta formule ci-dessous pour commander ton accès.</i>"
     )
 
 TICKET_TEMPLATE = (
@@ -192,15 +194,15 @@ TICKET_TEMPLATE = (
     "✅ Protection avancée pour le jeu\n"
     f"{LINE}\n\n"
     "<blockquote>💰 <b>Prix :</b> {price} HTG\n"
-    "💳 <b>Paiement :</b> Natcash\n"
+    "💳 <b>Paiement :</b> Natcash / MonCash\n"
     "📌 <b>Statut :</b> ⏳ En attente de paiement</blockquote>\n\n"
     f"{LINE}\n"
     "<b>✅ POUR VALIDER LA COMMANDE, CONTACTE L'ADMINISTRATEUR "
     "SUR TELEGRAM OU WHATSAPP 👇</b>\n\n"
     "📌 <b>CONSIGNES :</b>\n"
-    f"1️⃣ Pour recevoir ton VPN, contacte l'administrateur sur Telegram : <b>{ADMIN_USERNAME}</b>\n"
-    "2️⃣ Envoie-lui ce billet de commande et ton reçu Natcash de <b>{price} HTG</b>\n"
-    "3️⃣ Une fois ton VPN reçu, tape <b>{code}</b> dans ce chat "
+    f"1️⃣ Contacte l'administrateur sur Telegram : <b>{ADMIN_USERNAME}</b>\n"
+    "2️⃣ Envoie-lui ce billet de commande et ton reçu de paiement de <b>{price} HTG</b>\n"
+    "3️⃣ Une fois validé, tape <b>{code}</b> dans ce chat "
     "pour débloquer ton tutoriel <b>{tuto}</b> 🎓\n"
     f"{LINE}\n"
     f"📲 <i>Tu peux aussi écrire sur WhatsApp ({ADMIN_TEL}) avec le bouton ci-dessous.</i>\n\n"
@@ -217,19 +219,19 @@ TICKET_PANEL_TEMPLATE = (
     "📅 <b>Date :</b> {date}</blockquote>\n\n"
     f"{LINE}\n"
     "👑 <b>Produit :</b> {product}\n"
-    "✅ Accès Premium Panel\n"
-    "✅ Mise en place guidée\n"
+    "✅ Accès Premium Panel Inocsene Zero\n"
+    "✅ Installation et configuration guidées\n"
     f"{LINE}\n\n"
     "<blockquote>💰 <b>Prix :</b> {price} HTG\n"
-    "💳 <b>Paiement :</b> Natcash\n"
+    "💳 <b>Paiement :</b> Natcash / MonCash\n"
     "📌 <b>Statut :</b> ⏳ En attente de paiement</blockquote>\n\n"
     f"{LINE}\n"
     "<b>✅ POUR VALIDER LA COMMANDE, CONTACTE L'ADMINISTRATEUR "
     "SUR TELEGRAM OU WHATSAPP 👇</b>\n\n"
     "📌 <b>CONSIGNES :</b>\n"
-    f"1️⃣ Pour recevoir ton panel, contacte l'administrateur sur Telegram : <b>{ADMIN_USERNAME}</b>\n"
-    "2️⃣ Envoie-lui ce billet de commande et ton reçu Natcash de <b>{price} HTG</b>\n"
-    "3️⃣ Après vérification du paiement, tu reçois ton accès au panel 🔑\n"
+    f"1️⃣ Contacte l'administrateur sur Telegram : <b>{ADMIN_USERNAME}</b>\n"
+    "2️⃣ Envoie-lui ce billet de commande et ton reçu de paiement de <b>{price} HTG</b>\n"
+    "3️⃣ Après vérification, tu reçois immédiatement ton accès au panel 🔑\n"
     f"{LINE}\n"
     f"📲 <i>Tu peux aussi écrire sur WhatsApp ({ADMIN_TEL}) avec le bouton ci-dessous.</i>\n\n"
     "🙏 <i>Merci de ta confiance !</i>"
@@ -484,7 +486,7 @@ def on_click(call):
                 order=make_order_number(call.from_user.id),
                 name=get_name(call.from_user),
                 date=now_local().strftime("%d/%m/%Y à %H:%M (heure d'Haïti)"),
-                product=f"Panel Premium ({pl['label_fr']})",
+                product=f"Panel Premium VIP ({pl['label_fr']})",
                 price=f"{pl['price']:,}",
             )
             notify_admin(call.from_user, f"Billet Panel Premium : {pl['label_fr']} ({pl['price']:,} HTG)")
@@ -507,7 +509,7 @@ def on_click(call):
         code = data.split("_", 1)[1]
         if code in PRODUCTS:
             p = PRODUCTS[code]
-            clear_demo(chat)
+            clear_temp = clear_demo(chat)
             ticket = TICKET_TEMPLATE.format(
                 order=make_order_number(call.from_user.id),
                 name=get_name(call.from_user),
@@ -532,3 +534,4 @@ if __name__ == "__main__":
     t.start()
     print("Bot is starting...")
     bot.infinity_polling(skip_pending=True)
+    
