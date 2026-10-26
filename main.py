@@ -544,4 +544,4 @@ def send_guide_dayou(message):
 @bot.message_handler(content_types=["text"])
 def any_text(message):
     """Le client n'a pas de réponse, mais tu es prévenu de ce qu'il écrit."""
-    user = message.from_user
+    user = message.bot.infinity_polling(skip_pending=True)
